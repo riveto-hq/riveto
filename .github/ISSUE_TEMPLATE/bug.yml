@@ -1,0 +1,16 @@
+name: Bug report
+description: Something in Riveto does not work as documented.
+labels: [bug]
+body:
+  - type: input
+    id: version
+    attributes: { label: Version, description: "riveto --version, or the server's /health version" }
+    validations: { required: true }
+  - type: dropdown
+    id: where
+    attributes: { label: Where, options: [Cloud, Self-host, SDK, CLI, Editor, Docs] }
+    validations: { required: true }
+  - type: textarea
+    id: what
+    attributes: { label: What happened, description: Steps, expected and actual result. Remove secrets and personal data. }
+    validations: { required: true }
